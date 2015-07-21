@@ -17,7 +17,9 @@ class Memory {
 
     /** Returns the value of the main memory at the given address. */
     function int peek(int address) {
-        return;
+        var Array memory;
+        let memory = 0;
+        return memory[address];
     }
 
     /** Sets the value of the main memory at this address

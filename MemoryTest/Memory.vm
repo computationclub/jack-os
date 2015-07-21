@@ -3,8 +3,14 @@ push constant 2048
 pop static 0
 push constant 0
 return
-function Memory.peek 0
+function Memory.peek 1
 push constant 0
+pop local 0
+push argument 0
+push local 0
+add
+pop pointer 1
+push that 0
 return
 function Memory.poke 1
 push constant 0
