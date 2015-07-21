@@ -17,11 +17,16 @@ class Memory {
 
     /** Returns the value of the main memory at the given address. */
     function int peek(int address) {
+        return;
     }
 
     /** Sets the value of the main memory at this address
      *  to the given value. */
     function void poke(int address, int value) {
+        var Array memory;
+        let memory = 0;
+        let memory[address] = value;
+        return;
     }
 
     /** finds and allocates from the heap a memory block of the
@@ -35,5 +40,6 @@ class Memory {
 
     /** De-allocates the given object and frees its space. */
     function void deAlloc(int object) {
+        return;
     }
 }
