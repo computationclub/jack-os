@@ -5,11 +5,14 @@
 
 /**
  * Memory operations library.
- */ 
+ */
 class Memory {
+    static int free;
 
     /** Initializes memory parameters. */
     function void init() {
+        let free = 2048;
+        return;
     }
 
     /** Returns the value of the main memory at the given address. */
@@ -21,12 +24,16 @@ class Memory {
     function void poke(int address, int value) {
     }
 
-    /** finds and allocates from the heap a memory block of the 
+    /** finds and allocates from the heap a memory block of the
      *  specified size and returns a reference to its base address. */
     function int alloc(int size) {
+        var int pointer;
+        let pointer = free;
+        let free = free + size;
+        return pointer;
     }
 
     /** De-allocates the given object and frees its space. */
     function void deAlloc(int object) {
-    }    
+    }
 }
